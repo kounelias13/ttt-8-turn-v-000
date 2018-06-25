@@ -20,34 +20,34 @@ def valid_move?(board, index)
     false
   end
 end
+ 
  def input_to_index(input)
    index=input.to_i 
    index - 1
 end
 
 def position_taken?(board, index)
- if (board[index] == "" || board[index] == " ")
+  if (board[index] == "" || board[index] == " ")
     false
- else 
+  else 
     true
-  
- end
+  end
 end
 
 def turn(board)
   puts "Please enter 1-9:"
   input=gets
   index=input_to_index(input)
-  if !valid_move?(board, index)
+   if !valid_move?(board, index)
     turn(board)
-  
    else 
   move(board, index)
  display_board(board)
-  
+   end
 end
-  end
   
   
   
+
  
+
